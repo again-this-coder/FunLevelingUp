@@ -19,7 +19,7 @@ function App(): JSX.Element {
 
   return (
     <SafeAreaView style={backgroundStyle}>
-      <Text>Zdorov Sergo</Text>
+      <Text>test test</Text>
     </SafeAreaView>
   );
 }
