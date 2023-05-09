@@ -6,25 +6,22 @@
  */
 
 import React from 'react';
-import {SafeAreaView, StyleSheet, Text, useColorScheme} from 'react-native';
+import {SafeAreaView, View, StyleSheet} from 'react-native';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {HomeScreen} from './src/components/Screens/HomeScreen/HomeScreen';
 
 function App(): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <Text>test test</Text>
-    </SafeAreaView>
+    <View style={styles.colorWrapper}>
+      <SafeAreaView style={styles.root}>
+        <HomeScreen />
+      </SafeAreaView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  colorWrapper: {},
   root: {
     flex: 1,
   },
